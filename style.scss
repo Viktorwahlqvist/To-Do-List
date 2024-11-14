@@ -110,3 +110,14 @@ body {
     }
   }
 }
+@media screen and (max-width: 350px) {
+  html {
+    body {
+      main {
+        input {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
