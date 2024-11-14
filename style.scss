@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // Font family
+  font-family: "Roboto", sans-serif;
+  // background 100vh
+  height: 100vh;
+  background: url(../images/003_Olive-bellied_Sunbird_in_flight_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg)
+    no-repeat center center/cover;
+
+  // Flex styling
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    input {
+      border-radius: 5px;
+      font-size: 1.75rem;
+      box-shadow: 0 0 12px;
+      transition: ease-in 20ms;
+
+      &:hover {
+        border: 2px solid white;
+      }
+    }
+    #add-task {
+      background-color: green;
+      color: black;
+      border-radius: 10px;
+      padding: 5px 5px;
+      cursor: pointer;
+      font-size: 1.75rem;
+
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin: 10px auto;
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        animation: listEase 1s ease-out;
+
+        @keyframes listEase {
+          0% {
+            opacity: 0;
+          }
+
+          50% {
+            opacity: 0.5;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        .checkpara {
+          text-decoration: line-through red;
+        }
+
+        .textPara {
+          border-radius: 5px;
+          padding-left: 10px;
+          margin-right: 2px;
+          background-color: white;
+          box-shadow: 0 0 12px;
+          flex: 5;
+        }
+
+        .checkBtn,
+        .deleteBtn {
+          cursor: pointer;
+          flex: 1;
+          border-radius: 10px;
+          padding: 10px 0;
+        }
+        .checkBtn {
+          background-color: yellowgreen;
+          margin-right: 2px;
+
+          &:hover {
+            border: 1px solid black;
+          }
+        }
+        .deleteBtn {
+          background-color: red;
+
+          &:hover {
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}
