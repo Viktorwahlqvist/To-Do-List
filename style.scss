@@ -22,6 +22,7 @@ body {
   align-items: center;
   main {
     input {
+      // Input-text styling
       border-radius: 5px;
       font-size: 1.5rem;
       box-shadow: 0 0 12px;
@@ -30,7 +31,7 @@ body {
       &:hover {
         border: 2px solid white;
       }
-    }
+    } // Add task btn styling
     #add-task {
       background-color: green;
       color: black;
@@ -82,7 +83,7 @@ body {
           box-shadow: 0 0 12px;
           flex: 5;
         }
-
+        // check and delete btn styling
         .checkBtn,
         .deleteBtn {
           cursor: pointer;

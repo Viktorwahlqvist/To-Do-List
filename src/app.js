@@ -4,15 +4,15 @@ const ul = document.querySelector('#ul');
 
 /*add task btn disaled */
 addTask.disabled = true;
-/*If user type anything disabled will be false. */
+/*If user type anything add task btn will enable the btn. */
 inputTask.addEventListener('input', disableBtn);
 
-/*user adding a list, with function addLi */
+/*When the butting is clicked the task gets added to the list. */
 addTask.addEventListener('click', addLi);
 
 
 
-/*Function to add elements, buttons to li, and to a ul after */
+/* Function to add new task list items (li) with check and delete buttons */
 function addLi() {
     const Lista = document.createElement('li');
     const textPara = document.createElement('p');
@@ -22,19 +22,24 @@ function addLi() {
 
     inputTask.value = "";
     addTask.disabled = true;
-    
+
+
+     /* Create a check button to mark the task as complete */
     let checkBtn = document.createElement('button');
     checkBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
     checkBtn.classList.add('checkBtn');
     Lista.appendChild(checkBtn);
 
+    /* Create a delete button to remove the task */
     let deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
     deleteBtn.classList.add('deleteBtn');
     Lista.appendChild(deleteBtn);
 
+    /*Append the new list item (li) to the unordered list (ul) */
     ul.appendChild(Lista);
 
+    /*Add event listener to the check button for marking tasks as complete */
     checkBtn.addEventListener('click', checkedBtn);
 
     function checkedBtn (){
@@ -45,7 +50,7 @@ function addLi() {
             textPara.classList.add('checkpara')
         }
     }
-
+    /*Add event listener to the delete button to remove the task */
     deleteBtn.addEventListener('click', deletedBtn);
 
     function deletedBtn (e) {
@@ -59,7 +64,7 @@ function addLi() {
 
 
 
-/*Function to check if user have a valid input. */
+/*Function to check if the input field is not empty before enabling the add button */
 function disableBtn() {
     if (inputTask.value.trim() !== ""){
         
