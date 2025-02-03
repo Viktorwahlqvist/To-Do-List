@@ -1,4 +1,6 @@
-# To-Do List Application
+![image](https://github.com/Viktorwahlqvist/To-Do-List/blob/main/images/Sk%C3%A4rmbild%202025-02-03%20154743.png?raw=true)
+
+# To-Do List Applicatioen
 
 This is a simple To-Do List application that allows users to manage their daily tasks. Built using HTML, CSS, and JavaScript, this app features a visually appealing design with a background image and animations for task entries.
 
